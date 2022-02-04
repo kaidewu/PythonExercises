@@ -1,0 +1,2 @@
+"dsadd user "cn=vferrer, cn=Users, dc="secreatria", dc="santvicent", dc="ies", 
+-pwd Ba66age -disabled no"
