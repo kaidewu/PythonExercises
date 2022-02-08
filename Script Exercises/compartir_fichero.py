@@ -22,6 +22,7 @@ try:
             else:
                 os.system(f'mkdir {dirX}')
                 os.system(f'net share {nomFolder}={dirX} /GRANT:Usuarios,CHANGE')
+                os.system(f'icacls {dirX} /grant:r dominio14.local\{nomFolder}:M /inheritance:d')
 except:
     print('ERROR!')
     sys.exit(1)

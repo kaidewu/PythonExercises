@@ -2,6 +2,12 @@ import os
 import sys
 import socket
 
+def main():
+    while accion != 7:
+        accion = int(input('1 (Cambiar tu IP del ordenador)'))
+        if accion == 1:
+            cambiarIP()
+
 def cambiarIP():
     try:
         address = input('Dime la IP que quieres: ')
@@ -21,5 +27,5 @@ def cambiarNombre():
         print('No has puesto bien los parametros!')
         sys.exit(1)
     os.system(f'netdom renamecomputer %{socket.gethostname()}% /Newname "{name}"')
-while accion != 7:
-    accion = int(input('1 (Cambiar tu IP del ordenador)'))
+
+main()
