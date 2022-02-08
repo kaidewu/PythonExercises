@@ -4,6 +4,9 @@ import socket
 
 def main():
     while accion != 7:
+        print('***************************************************************')
+        print('*                          Welcome                            *')
+        print('***************************************************************')
         accion = int(input('1 (Cambiar tu IP del ordenador)'))
         if accion == 1:
             cambiarIP()
