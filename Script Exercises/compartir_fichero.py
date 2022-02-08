@@ -15,10 +15,10 @@ try:
             nomFolder = lista[-1]
             print(dirX)
             if os.path.exists(nomFolder):
-                os.system(f'net share {nomFolder}={dirX} /GRANT:Usuario,CHANGE')
+                os.system(f'net share {nomFolder}={dirX} /GRANT:Usuarios,CHANGE')
             else:
                 os.system(f'mkdir {dirX}')
-                os.system(f'net share {nomFolder}={dirX} /GRANT:Usuario,CHANGE')
+                os.system(f'net share {nomFolder}={dirX} /GRANT:Usuarios,CHANGE')
 except:
     print('ERROR!')
     sys.exit(1)
