@@ -3,13 +3,12 @@ import sys
 import socket
 
 def main():
-    while accion != 7:
-        print('***************************************************************')
-        print('*                          Welcome                            *')
-        print('***************************************************************')
-        accion = int(input('1 (Cambiar tu IP del ordenador)'))
-        if accion == 1:
-            cambiarIP()
+    print('***************************************************************')
+    print('*                          Welcome                            *')
+    print('***************************************************************')
+    accion = int(input('1.- Cambiar tu IP del ordenador\n2.- Cambiar el nombre de la máquina\n3.- Promocionar\n4.- Crear unidades organizativas\n5.- Crear grupos\n6.- Crear usuarios\n7.- Salir\n¿Cuál quieres elegir?: '))
+    if accion == 1:
+        cambiarIP()
 
 def cambiarIP():
     try:

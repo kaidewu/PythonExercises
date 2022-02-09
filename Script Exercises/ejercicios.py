@@ -12,11 +12,11 @@ def treeFolder():
     x = os.popen("dir").read()
     print("ejecución de os.popen().read()")
     print(x)
-    
+
     lineas = os.popen("dir").readlines()
     print("ejecución de os.popen().readlines()")
     print(lineas)
-    
+
     for l in x:
         l = l.strip()
         print(l)
@@ -40,7 +40,7 @@ def CopyControl():
         print("No has puesto los valores")
 
 def Buclecopia():
-    n = 0       
+    n = 0
     if len(sys.argv) >= 3:
             if not os.path.exists(sys.argv[-1]):
                 os.mkdir(sys.argv[-1])
@@ -140,7 +140,7 @@ def multiping():
         else:
             print(f"La IP {red}.{i} es accesible")
     multiping()
-    
+
 def ficherotest():
     with open("asereje.txt", "w") as cancion:
         with open("pepe.txt", "r") as test:
@@ -165,7 +165,7 @@ def escribirficheros():
                 print("Adiós")
                 break
     escribirficheros()
-    
+
 def tablanum():
     num = int(input("Escribe un número del 1 al 10: "))
     if num > 0 and num < 11:
@@ -218,10 +218,10 @@ def covidvalencia():
                 lista = csv.reader(casos)
                 for cada_linea in lista:
                     if cada_linea[0] == 'VC':
-                        casosvc.write(', '.join(cada_linea) + '\n')             
+                        casosvc.write(', '.join(cada_linea) + '\n')
     except:
         print("Ha ocurrido un error!")
-        sys.exit(-1)        
+        sys.exit(-1)
     covidvalencia()
 
 def totalcovid():
@@ -237,9 +237,9 @@ def totalcovid():
                         casosvc.write(', '.join(cada_linea) + ', ' + str(numcasos) + '\n')
     except:
         print("Ha ocurrido un error!")
-        sys.exit(-1)   
+        sys.exit(-1)
     totalcovid()
-    
+
 def comprobacioncovid():
     import csv
     numcasos = 0
@@ -254,13 +254,13 @@ def comprobacioncovid():
                         for i in range(2, 8):
                             if cada_linea[i] == 0 or not cada_linea[i].isdecimal():
                                 cada_linea[i] = "0"
-                                x += cada_linea[i] 
+                                x += cada_linea[i]
                         casosvc.write(cada_linea[0] + ", "+ cada_linea[1] + ", " + ", ".join(x) + ", " + numcasos + "\n")
     except:
         print(Error)
-        sys.exit(-1)   
+        sys.exit(-1)
     comprobacioncovid()
-    
+
 def crearusuarios():
     import csv
     contador = 0
@@ -276,7 +276,7 @@ def crearusuarios():
                 contador = 1
     except:
         print("Ha habido un Error!")
-        sys.exit(-1)            
+        sys.exit(-1)
     crearusuarios()
 
 def creargrupos():
@@ -293,10 +293,10 @@ def creargrupos():
                 contador = 1
     except:
         print("Ha habido un Error!")
-        sys.exit(-1)            
+        sys.exit(-1)
     creargrupos()
-    
-def añadirusuagru():  
+
+def añadirusuagru():
     import csv
     contador = 0
     try:
@@ -312,7 +312,7 @@ def añadirusuagru():
                 contador = 1
     except:
         print("Ha habido un Error!")
-        sys.exit(-1)            
+        sys.exit(-1)
     añadirusuagru()
 
 def copiaseguridad():
@@ -363,7 +363,7 @@ def infopc():
     avail_mem = int(psutil.virtual_memory().available * 100 / psutil.virtual_memory().total)
     print(f'''Estado actual del PC: La CPU esta al {perc_cpu}% Usando {mem_virt} Mb de memoria Quedando {avail_mem}% memoria libre''')
     infopc()
-    
+
 def backupFull():
     from zipfile import ZipFile
     import datetime as dt
@@ -375,7 +375,7 @@ def backupFull():
             zipfile.write(each_file)
             os.system(f"attrib -a {each_file}")
     backupFull()
-    
+
 def backup1000():
     from zipfile import ZipFile as zip
     import datetime as dt
