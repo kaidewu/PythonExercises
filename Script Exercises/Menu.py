@@ -1,3 +1,4 @@
+from nntplib import GroupInfo
 import os
 import sys
 import socket
@@ -5,11 +6,19 @@ import csv
 
 hostnameActual = socket.gethostname()
 
+
 def main():
     while True:
-        print('***************************************************************')
-        print('*                          Welcome                            *')
-        print('***************************************************************')
+        print('''
+                                *------------------------------------------------------------------------------*
+                 |                                                                              |
+                 |                                                                              |
+                 |                                                                              |
+                 |                                 Bienvenido                                   |
+                 |                                                                              |
+                 |                                                                              |
+                 |                                                            Hecho por Kaide Wu|
+                 *------------------------------------------------------------------------------*''')
         accion = input('1.- Cambiar tu IP del ordenador\n2.- Cambiar el nombre de la máquina\n3.- Promocionar\n4.- Crear unidades organizativas\n5.- Crear grupos\n6.- Crear usuarios\n7.- Salir\n¿Cuál quieres elegir?: ')
         if accion == '1':
             cambiarIP()
@@ -59,10 +68,26 @@ def promocionar():
     os.system("shutdown -r -t 0")
 
 def crearUO():
-    print
+    try:
+        ouName = input('Dime la ruta del archivo csv: ')
+        domainName = input('Dime el nombre de tu dominio (ej. midominio.com): ')
+    except:
+        print('Has puesto los parametros mal!!')
+    domainName = domainName.split('.')
+    if len(domainName) == 2:
+
+        os.system(f'dsadd ou ou={ouName},dc={domainName[0]},dc={domainName[1]}')
+    else:
+        print('Hay un error al poner el nombre del dominio!!!')
 
 def crearGrupos():
     contador = 0
+    try:
+        groupfile = input('Dime la ruta del archivo csv: ')
+        if not os.path.exists(groupfile):
+            print('La ruta del archivo no es correacta!!')
+    except:
+        print('Ha habido un error en la ruta del archivo csv!!')
     try:
         with open("grupos.csv", "r") as grupo:
             lista = csv.reader(grupo)
@@ -73,11 +98,16 @@ def crearGrupos():
                     os.system(f"dsadd group \"cn={grupo}, cn={uo}, dc=dominio14, dc=local\" -secgrp yes -scope L")
                 contador = 1
     except:
-        print("Ha habido un Error!")
-        sys.exit(-1)
+        print('Ha habido un error')
 
 def crearUsuarios():
     contador = 0
+    try:
+        userfile = input('Dime la ruta del archivo csv: ')
+        if not os.path.exists(userfile):
+            print('La ruta del archivo no es correacta!!')
+    except:
+        print('Ha habido un error en la ruta del archivo csv!!')
     try:
         with open("usuarios.csv", "r") as usuarios:
             lista = csv.reader(usuarios)
