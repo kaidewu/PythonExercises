@@ -10,23 +10,22 @@ def main():
         print('***************************************************************')
         print('*                          Welcome                            *')
         print('***************************************************************')
-        accion = int(input('1.- Cambiar tu IP del ordenador\n2.- Cambiar el nombre de la máquina\n3.- Promocionar\n4.- Crear unidades organizativas\n5.- Crear grupos\n6.- Crear usuarios\n7.- Salir\n¿Cuál quieres elegir?: '))
-        if accion == 1:
+        accion = input('1.- Cambiar tu IP del ordenador\n2.- Cambiar el nombre de la máquina\n3.- Promocionar\n4.- Crear unidades organizativas\n5.- Crear grupos\n6.- Crear usuarios\n7.- Salir\n¿Cuál quieres elegir?: ')
+        if accion == '1':
             cambiarIP()
-        elif accion == 2:
+        elif accion == '2':
             cambiarNombre()
-        elif accion == 3:
+        elif accion == '3':
             promocionar()
-        elif accion == 4:
+        elif accion == '4':
             crearUO()
-        elif accion == 5:
+        elif accion == '5':
             crearGrupos()
-        elif accion == 6:
+        elif accion == '6':
             crearUsuarios()
-        elif accion == 7:
+        elif accion == '7':
             print('Adiós!')
             break
-
 
 def cambiarIP():
     try:
@@ -56,7 +55,7 @@ def promocionar():
         print('Ha habido un error!!')
         sys.exit(1)
 
-    os.system(f'dcpromo /InstallDNS:Yes /ReplicaOrNewDomain:Domain /NewDomain:Forest /NewDomainDNSName:{domainDNSName} /ForestLevel:3 /DomainNetbiosName:{netbiosName} /DomainLevel:3 /ConfirmGc:Yes /CreateDNSDelegation:No /DatabasePath:"C:\Windows\NTDS" /LogPath:"C:\Windows\NTDS" /SYSVOLPath:"C:\Windows\SYSVOL"')
+    os.system(f'dcpromo /InstallDNS:Yes /ReplicaOrNewDomain:Domain /NewDomain:Forest /NewDomainDNSName:{domainDNSName} /ForestLevel:3 /DomainNetbiosName:{netbiosName} /DomainLevel:3 /ConfirmGc:Yes /CreateDNSDelegation:No /DatabasePath:\"C:\\Windows\\NTDS\" /LogPath:\"C:\\Windows\\NTDS\" /SYSVOLPath:\"C:\\Windows\\SYSVOL\"')
     os.system("shutdown -r -t 0")
 
 def crearUO():
