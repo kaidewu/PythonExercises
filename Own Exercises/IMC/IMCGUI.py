@@ -1,6 +1,6 @@
 # Import everything from tkinter
 from tkinter import *
-import math
+
 # Create a tkinter window
 app = Tk()
 
