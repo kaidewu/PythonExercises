@@ -253,7 +253,7 @@ def comprobacioncovid():
                                 x += cada_linea[i]
                         casosvc.write(cada_linea[0] + ", "+ cada_linea[1] + ", " + ", ".join(x) + ", " + numcasos + "\n")
     except:
-        print(Error)
+        print('Error')
         sys.exit(-1)
     comprobacioncovid()
 
