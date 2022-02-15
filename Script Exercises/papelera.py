@@ -8,7 +8,7 @@ import shutil
 try:
     path = input('Dime el archivo que quieres mandar a la papelera: ')
 except:
-    print('Ha ocurrido un error!')
+    print('\nHa ocurrido un error!')
     sys.exit(1)
 
 # Le damos una variable a la fecha
@@ -28,5 +28,6 @@ else:
     else:
         if not os.path.exists(f'D:\\papelera\\{fecha}'):
             os.system(f'mkdir D:\\papelera\\{fecha}')
+            shutil.move(path, f'D:\\papelera\\{fecha}')
         else:
             shutil.move(path, f'D:\\papelera\\{fecha}')
