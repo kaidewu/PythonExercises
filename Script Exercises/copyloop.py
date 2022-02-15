@@ -5,7 +5,7 @@ import shutil
 if len(sys.argv) >= 3:
         if not os.path.exists(sys.argv[-1]):
             os.mkdir(sys.argv[-1])
-            for j in range(1, (len(sys.argv) - 2)):
+            for j in range(1, (len(sys.argv) - 1)):
                 if not os.path.exists(sys.argv[j]):
                     print(f"El fichero {sys.argv[j]} no existe")
                 else:
