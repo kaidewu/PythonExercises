@@ -1,11 +1,7 @@
 from datetime import date
-from msilib.schema import Error
-from pdb import lasti2lineno
 import sys
 import os
 import shutil
-from traceback import print_tb
-from urllib.request import ProxyDigestAuthHandler
 
 def treeFolder():
     os.system("dir")
