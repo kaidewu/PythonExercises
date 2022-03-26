@@ -8,6 +8,7 @@ git clone https://github.com/kaidewu/PythonExercises
 ```
 
 After that, run this command
+
 Windows:
 ```
 python PythonExercises/Learning Python Exercises/Wordle/main.py
