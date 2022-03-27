@@ -24,7 +24,6 @@ def main():
     list_words = []
     word_day = word_of_day()
     list_main_word = letters_words(word_day)
-    print(list_main_word)
     while num_attempts < 6:
         if num_attempts == 5:
                 print(f'Almost!! The word of the day is {word_day}')

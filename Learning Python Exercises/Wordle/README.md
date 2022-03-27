@@ -16,7 +16,7 @@ python PythonExercises/Learning Python Exercises/Wordle/main.py
 
 Linux:
 ```
-python3 PythonExercises/Learning Python Exercises/Wordle/main.py
+python3 PythonExercises/Learning\ Python\ Exercises/Wordle/main.py
 ```
 
 And now you can play! :)
