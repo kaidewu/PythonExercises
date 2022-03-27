@@ -18,3 +18,5 @@ Linux:
 ```
 python3 PythonExercises/Learning Python Exercises/Wordle/main.py
 ```
+
+And you can play now! :)
