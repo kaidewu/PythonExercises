@@ -11,7 +11,7 @@ After that, run this command
 
 Windows:
 ```
-python PythonExercises/Learning Python Exercises/Wordle/main.py
+python PythonExercises\Learning Python Exercises\Wordle\main.py
 ```
 
 Linux:
