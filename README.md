@@ -1,7 +1,7 @@
-## Python exercises
-### Basic Exercises
-Super basic exercises made in class
-### Own Exercises
-Exercises made by myself
-### Script Exercises
-Exercises of script for OS, especially for Windows Server.
+# Python exercises
+
+### Learning Python
+Exercises for learning python
+
+### Wordle Game
+Wordle Game in the terminal
