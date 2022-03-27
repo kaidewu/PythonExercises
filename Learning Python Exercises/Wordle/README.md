@@ -20,3 +20,6 @@ python3 PythonExercises/Learning\ Python\ Exercises/Wordle/main.py
 ```
 
 And now you can play! :)
+
+# Snapshots
+![Capture](img/snapshot2.png)
