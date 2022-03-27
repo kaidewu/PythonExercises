@@ -41,5 +41,5 @@ def main():
             termtables(list_words)
             if user_word == word_day:
                 print('Well done!! You find the word of the day!!')
-                break            
+                break
 main()
