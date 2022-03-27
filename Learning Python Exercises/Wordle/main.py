@@ -22,10 +22,12 @@ def termtables(list_words):
 def main():
     num_attempts = 0
     list_words = []
-    list_main_word = letters_words(word_of_day())
+    word_day = word_of_day()
+    list_main_word = letters_words(word_day)
+    print(list_main_word)
     while num_attempts < 6:
         if num_attempts == 5:
-                print(f'Almost!! The word of the day is {word_of_day()}')
+                print(f'Almost!! The word of the day is {word_day}')
                 break
         user_word = input('Enter a 5-letter Word: ').upper()
         if len(user_word) == 5 and user_word != '':
@@ -38,5 +40,7 @@ def main():
                     list_user_word[i] = Fore.YELLOW + list_user_word[i] + Style.RESET_ALL
             list_words.append(list_user_word)
             termtables(list_words)
-
+            if user_word == word_day:
+                print('Well done!! You find the word of the day!!')
+                break            
 main()
