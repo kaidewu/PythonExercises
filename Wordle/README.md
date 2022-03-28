@@ -15,7 +15,7 @@ cd PythonExercises
 ```
 
 ```
-python PythonExercises\Learning Python Exercises\Wordle\main.py
+python Wordle\main.py
 ```
 
 Linux:
@@ -24,7 +24,7 @@ cd PythonExercises
 ```
 
 ```
-python3 PythonExercises/Learning\ Python\ Exercises/Wordle/main.py
+python3 Wordle/main.py
 ```
 
 And now you can play! :)
