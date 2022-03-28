@@ -11,10 +11,18 @@ After that, run this command
 
 Windows:
 ```
+cd PythonExercises
+```
+
+```
 python PythonExercises\Learning Python Exercises\Wordle\main.py
 ```
 
 Linux:
+```
+cd PythonExercises
+```
+
 ```
 python3 PythonExercises/Learning\ Python\ Exercises/Wordle/main.py
 ```
