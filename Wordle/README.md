@@ -13,21 +13,9 @@ Windows:
 python -m pip install -r requirements.txt
 ```
 
-or
-
-```
-pip install -r requirements.txt
-```
-
 Linux:
 ```
 python -m pip install -r requirements.txt
-```
-
-or
-
-```
-pip install -r requirements.txt
 ```
 
 After that, run this command
