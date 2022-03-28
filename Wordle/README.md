@@ -6,6 +6,29 @@ First, you need to clone this repository
 ```
 git clone https://github.com/kaidewu/PythonExercises
 ```
+Install  the requirements:
+
+Windows:
+```
+python -m pip install -r requirements.txt
+```
+
+or
+
+```
+pip install -r requirements.txt
+```
+
+Linux:
+```
+python -m pip install -r requirements.txt
+```
+
+or
+
+```
+pip install -r requirements.txt
+```
 
 After that, run this command
 
