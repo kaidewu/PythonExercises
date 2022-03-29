@@ -42,4 +42,5 @@ def main():
             if user_word == word_day:
                 print('Well done!! You find the word of the day!!')
                 break
-main()
+if __name__ == '__main__':
+    main()
