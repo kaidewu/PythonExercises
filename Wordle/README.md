@@ -15,7 +15,12 @@ python -m pip install -r requirements.txt
 ```
 
 After that, run this command
+Windows:
+```
+python Wordle\\main.py
+```
 
+Linux:
 ```
 python3 Wordle/main.py
 ```
