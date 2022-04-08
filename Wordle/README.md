@@ -8,13 +8,13 @@ git clone https://github.com/kaidewu/PythonExercises
 ```
 Install  the requirements:
 ```
+cd PythonExercises
+```
+```
 python -m pip install -r requirements.txt
 ```
 
 After that, run this command
-```
-cd PythonExercises
-```
 
 ```
 python3 Wordle/main.py
