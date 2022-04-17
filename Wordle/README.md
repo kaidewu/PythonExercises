@@ -7,33 +7,20 @@ First, you need to clone this repository
 git clone https://github.com/kaidewu/PythonExercises
 ```
 Install  the requirements:
-
-Windows:
+```
+cd PythonExercises
+```
 ```
 python -m pip install -r requirements.txt
 ```
 
-Linux:
-```
-python3 -m pip install -r requirements.txt
-```
-
 After that, run this command
-
 Windows:
 ```
-cd PythonExercises
-```
-
-```
-python Wordle\main.py
+python Wordle\\main.py
 ```
 
 Linux:
-```
-cd PythonExercises
-```
-
 ```
 python3 Wordle/main.py
 ```
